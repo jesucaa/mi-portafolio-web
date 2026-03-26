@@ -204,13 +204,16 @@ h3 {
 }
 
 .profile-photo {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    border-radius: 100%;
-    border: 2px solid white;
-    width: 100px;
-    height: 100px;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 2px solid var(--primario);
+
+    object-fit: cover; /* ESTO ES LO QUE ARREGLA LA IMAGEN APLASTADA EN <IMG> */
+    /* ESTO TE PERMITE MOVERLA ARRIBA O ABAJO MANUALMENTE */
+    /* 50% es centro lateral, el segundo valor es arriba/abajo */
+    object-position: 50% 10%;
+
     margin-bottom: 2rem;
     /* bottom: -50px;
     position: absolute; */
